@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class CooldownSlider : MonoBehaviour
 {
-    public ProjectileWeaponSO weaponSO;
+    public CooldownPercentSO cooldownPercentSO;
     public RectTransform sliderFrontImage;
 
     private float maxValue;
@@ -15,7 +15,7 @@ public class CooldownSlider : MonoBehaviour
     }
 
     void Update() {
-        float cooldownPercent = weaponSO.GetCoolDownPercent();
+        float cooldownPercent = cooldownPercentSO.value;
         sliderFrontImage.offsetMax = new Vector2(-(maxValue - (cooldownPercent * maxValue / 100)), sliderFrontImage.offsetMax.y);
     }
 }
