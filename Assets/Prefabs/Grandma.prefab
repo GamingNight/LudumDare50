@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6165255557834437434}
   - component: {fileID: 6165255557834437435}
-  - component: {fileID: 6165255557834437428}
   - component: {fileID: 6165255557834437432}
   - component: {fileID: 6165255557834437433}
+  - component: {fileID: 6165255557834437428}
   - component: {fileID: -2592458792154434174}
   m_Layer: 0
   m_Name: Grandma
@@ -88,19 +88,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6165255557834437428
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6165255557834437429}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50ae58295e43db34cabb44c1fd88a369, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
 --- !u!61 &6165255557834437432
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -148,6 +135,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &6165255557834437428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6165255557834437429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50ae58295e43db34cabb44c1fd88a369, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
 --- !u!114 &-2592458792154434174
 MonoBehaviour:
   m_ObjectHideFlags: 0
