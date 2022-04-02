@@ -53,3 +53,6 @@ TagManager:
   - name: GrandMa
     uniqueID: 3790220749
     locked: 0
+  - name: Foreground
+    uniqueID: 947854979
+    locked: 0
