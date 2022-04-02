@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 2988166867817117311}
   m_Layer: 0
   m_Name: GrandMa1
-  m_TagString: Untagged
+  m_TagString: Grandma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
