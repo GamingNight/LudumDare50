@@ -15,3 +15,6 @@ MonoBehaviour:
   sprite: {fileID: 21300000, guid: 3632496de57b0cb4eb9a045e7b672ba2, type: 3}
   projectilePrefab: {fileID: 7515326804073847037, guid: 67ca86901a402524fb9f7a868a0a211b, type: 3}
   initProjectilePosition: {x: 0.66, y: 0.12}
+  shootRate: 2
+  cooldownLossPerShoot: 20
+  cooldownReloadRate: 5

@@ -699,6 +699,7 @@ GameObject:
   - component: {fileID: 1221981147}
   - component: {fileID: 1221981149}
   - component: {fileID: 1221981148}
+  - component: {fileID: 1221981150}
   m_Layer: 5
   m_Name: CoolDownSliderBack
   m_TagString: Untagged
@@ -765,6 +766,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1221981146}
   m_CullTransparentMesh: 1
+--- !u!114 &1221981150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1221981146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35a64ceb705fdc140aaf6c102334f925, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponSO: {fileID: 11400000, guid: ad4c29d8aeba9054794a56fb10c061b7, type: 2}
+  sliderFrontImage: {fileID: 254086175}
 --- !u!1 &1429635038
 GameObject:
   m_ObjectHideFlags: 0
