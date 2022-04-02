@@ -7,6 +7,7 @@ public class ProjectileWeaponHandler : MonoBehaviour
 {
     public ProjectileWeaponSO weaponSO;
     public CooldownPercentSO cooldownPercentSO;
+    public WeaponSelectorSO weaponSelectorSO;
 
     private float lastShootTime;
     private float lastCooldownTime;
@@ -19,7 +20,7 @@ public class ProjectileWeaponHandler : MonoBehaviour
     }
 
     void Update() {
-        if (Input.GetMouseButton(0)) {
+        if (Input.GetMouseButton(0) && weaponSelectorSO.selectedWeapon == gameObject) {
             if (weaponSO.Activate(gameObject, lastShootTime, cooldownPercentSO.value)) {
                 lastShootTime = Time.time;
                 cooldownPercentSO.value = Mathf.Max(0, cooldownPercentSO.value - weaponSO.cooldownLossPerShoot);

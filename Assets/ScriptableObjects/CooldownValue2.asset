@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5cce7da12c05a2b47b0e7ccf8c3d02bd, type: 3}
-  m_Name: CooldownWeapon3
+  m_Name: CooldownValue2
   m_EditorClassIdentifier: 
   value: 0

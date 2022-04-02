@@ -10,6 +10,7 @@ public class KidController : MonoBehaviour
     void Start() {
         GetComponent<SpriteRenderer>().sprite = kidSO.sprite;
     }
+
     void Update() {
 
     }
