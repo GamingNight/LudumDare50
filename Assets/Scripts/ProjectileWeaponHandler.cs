@@ -14,6 +14,10 @@ public class ProjectileWeaponHandler : MonoBehaviour
 
     void Start() {
         GetComponent<SpriteRenderer>().sprite = weaponSO.sprite;
+        Init();
+    }
+
+    public void Init() {
         lastShootTime = 0;
         cooldownPercentSO.value = 100;
         lastCooldownTime = 0;

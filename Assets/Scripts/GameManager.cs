@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     }
 
     public GameObject game;
+    public GameObject gameover;
 
     void Start() {
 
@@ -27,5 +28,16 @@ public class GameManager : MonoBehaviour
 
     public void GameOver() {
         game.SetActive(false);
+        gameover.SetActive(true);
+    }
+
+    public void StartGame() {
+        game.GetComponent<InitGame>().Init();
+        gameover.SetActive(false);
+        game.SetActive(true);
+    }
+
+    public void Quit() {
+        Application.Quit();
     }
 }
