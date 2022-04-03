@@ -16,7 +16,8 @@ public class GameManager : MonoBehaviour
     }
 
     public GameObject game;
-    public GameObject gameover;
+    public GameObject gameoverMenu;
+    public GameObject startMenu;
 
     void Start() {
 
@@ -28,16 +29,23 @@ public class GameManager : MonoBehaviour
 
     public void GameOver() {
         game.SetActive(false);
-        gameover.SetActive(true);
+        gameoverMenu.SetActive(true);
     }
 
     public void StartGame() {
         game.GetComponent<InitGame>().Init();
-        gameover.SetActive(false);
+        startMenu.SetActive(false);
+        gameoverMenu.SetActive(false);
         game.SetActive(true);
     }
 
     public void Quit() {
         Application.Quit();
+    }
+
+    public void StartMenu() {
+        game.SetActive(false);
+        gameoverMenu.SetActive(false);
+        startMenu.SetActive(true);
     }
 }
