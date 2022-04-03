@@ -4,5 +4,5 @@ using UnityEngine;
 
 public abstract class AbstractWeaponSO : ScriptableObject
 {
-    public abstract bool Activate(GameObject weapon, float lastShootTime, float cooldownPercent);
+    public abstract GameObject Activate(GameObject weapon, float lastShootTime, float cooldownPercent, Vector2 spawnPosition);
 }

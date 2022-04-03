@@ -11,14 +11,16 @@ public class ProjectileWeaponSO : AbstractWeaponSO
     public float cooldownLossPerShoot;
     public float cooldownReloadRate; //percents per second
 
-    public override bool Activate(GameObject weapon, float lastShootTime, float cooldownPercent) {
+    public override GameObject Activate(GameObject weapon, float lastShootTime, float cooldownPercent, Vector2 spawnPosition) {
         if (Time.time >= lastShootTime + (1f / shootRate) && cooldownPercent > 0) {
-            GameObject projectile = Instantiate<GameObject>(projectilePrefab, weapon.transform);
-            projectile.transform.localPosition = initProjectilePosition;
+            GameObject projectile = Instantiate<GameObject>(projectilePrefab);
+            projectile.transform.parent = weapon.transform.parent;
+            projectile.transform.position = spawnPosition;
+            projectile.transform.rotation = weapon.transform.rotation;
             projectile.GetComponent<ProjectileMovement>().direction = weapon.transform.right;
-            return true;
+            return projectile;
         } else {
-            return false;
+            return null;
         }
     }
 }

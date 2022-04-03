@@ -29,7 +29,8 @@ Transform:
   m_LocalPosition: {x: 1.6, y: -0.52, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 5509679872508986952}
   m_Father: {fileID: 1448662173667237944}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -100,6 +101,9 @@ MonoBehaviour:
   weaponSO: {fileID: 11400000, guid: c7f7f6d194adc984d80e43844c0c0079, type: 2}
   cooldownPercentSO: {fileID: 11400000, guid: b339fe3921f2b0d4ba7c867b47001f55, type: 2}
   weaponSelectorSO: {fileID: 11400000, guid: a9d4426afa1a8cc4fab8c3f41e08a088, type: 2}
+  minOrientation: 0
+  maxOrientation: 0
+  shootPoint: {fileID: 5509679872508986952}
 --- !u!1 &1448662173286971538
 GameObject:
   m_ObjectHideFlags: 0
@@ -297,7 +301,7 @@ Transform:
   m_GameObject: {fileID: 1448662173667237943}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -6.54, y: 3.45, z: -0.13540733}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1448662174068319384}
@@ -1128,6 +1132,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &5590207398484556237
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5509679872508986952}
+  m_Layer: 0
+  m_Name: ShootPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5509679872508986952
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5590207398484556237}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.139, y: 0.25, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1448662173276593471}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6189394527924445830
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,18 +7,20 @@ public class GrandmaGenerator : MonoBehaviour
 
     public GameObject grandMaPrefab;
     public Vector3 spawnPosition;
-
     public float spawnRate; //nb per second
+    public ScoreSO scoreSo;
+    public string sortingLayer;
 
     private float lastSpawnTime;
     private List<GameObject> instantiatedGrandmas;
 
     void Start() {
-        instantiatedGrandmas = new List<GameObject>();
         Init();
     }
 
     public void Init() {
+        if (instantiatedGrandmas == null)
+            instantiatedGrandmas = new List<GameObject>();
         foreach (GameObject grandma in instantiatedGrandmas) {
             Destroy(grandma);
         }
@@ -28,10 +30,16 @@ public class GrandmaGenerator : MonoBehaviour
 
     void Update() {
 
-        if (Time.time > lastSpawnTime + (1f / spawnRate)) {
-            GameObject clone = Instantiate<GameObject>(grandMaPrefab, spawnPosition, Quaternion.identity, transform);
-            instantiatedGrandmas.Add(clone);
-            lastSpawnTime = Time.time;
+        if (spawnRate > 0) {
+            if (Time.time > lastSpawnTime + (1f / spawnRate)) {
+                GameObject clone = Instantiate<GameObject>(grandMaPrefab, spawnPosition, Quaternion.identity, transform);
+                SpriteRenderer[] spriteRenderers = clone.GetComponentsInChildren<SpriteRenderer>();
+                foreach (SpriteRenderer sr in spriteRenderers) {
+                    sr.sortingLayerName = sortingLayer;
+                }
+                instantiatedGrandmas.Add(clone);
+                lastSpawnTime = Time.time;
+            }
         }
     }
 }

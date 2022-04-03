@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 4510738184334359322}
   - component: {fileID: 1318544618795483416}
   - component: {fileID: 5508380081107285398}
-  - component: {fileID: 2988166867817117311}
+  - component: {fileID: 7152316499979433442}
   m_Layer: 0
   m_Name: GrandMa1
   m_TagString: Grandma
@@ -183,7 +183,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
---- !u!114 &2988166867817117311
+--- !u!114 &7152316499979433442
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -192,9 +192,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1725267820591588786}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 772a0393dc116cf4bbdea5aba9f89a40, type: 3}
+  m_Script: {fileID: 11500000, guid: 1e3ce8206412b6c48b6d9cf2178d5086, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreSO: {fileID: 11400000, guid: d34cb7a0f9e97734db4aecbe738cc832, type: 2}
 --- !u!1 &1725267820760557498
 GameObject:
   m_ObjectHideFlags: 0

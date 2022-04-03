@@ -7,7 +7,7 @@ public class ProjectileMovement : MonoBehaviour
 
     public ProjectileSO projectileSO;
     public Vector2 direction;
-    
+
     void Update() {
 
         transform.Translate(direction * projectileSO.speed * Time.deltaTime);
@@ -15,7 +15,7 @@ public class ProjectileMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.tag == "Grandma") {
-            Destroy(collision.gameObject);
+            Destroy(gameObject);
         }
     }
 }

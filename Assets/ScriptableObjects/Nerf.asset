@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Nerf
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 7515326804073847037, guid: ad65817da6e0c3949a8b5d6ed089a62a, type: 3}
-  initProjectilePosition: {x: 1.73, y: 0.27}
+  initProjectilePosition: {x: 0.864, y: 0.135}
   shootRate: 4
   cooldownLossPerShoot: 20
   cooldownReloadRate: 5
