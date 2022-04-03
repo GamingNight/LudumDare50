@@ -7,11 +7,7 @@ public class ProjectileMovement : MonoBehaviour
 
     public ProjectileSO projectileSO;
     public Vector2 direction;
-
-    void Start() {
-        GetComponent<SpriteRenderer>().sprite = projectileSO.sprite;
-    }
-
+    
     void Update() {
 
         transform.Translate(direction * projectileSO.speed * Time.deltaTime);

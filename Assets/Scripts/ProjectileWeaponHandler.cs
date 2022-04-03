@@ -13,7 +13,6 @@ public class ProjectileWeaponHandler : MonoBehaviour
     private float lastCooldownTime;
 
     void Start() {
-        GetComponent<SpriteRenderer>().sprite = weaponSO.sprite;
         Init();
     }
 
