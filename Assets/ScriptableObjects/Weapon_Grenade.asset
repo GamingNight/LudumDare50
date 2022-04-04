@@ -15,4 +15,4 @@ MonoBehaviour:
   projectilePrefab: {fileID: 7515326804073847037, guid: f86d5ef88ce16b34cbe1dbae2311ef27, type: 3}
   shootRate: 1
   cooldownLossPerShoot: 100
-  cooldownReloadRate: 10
+  cooldownReloadRate: 1

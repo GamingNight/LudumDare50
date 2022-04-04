@@ -4,5 +4,5 @@ using UnityEngine;
 
 public abstract class AbstractWeaponSO : ScriptableObject
 {
-    public abstract GameObject[] Activate(GameObject weapon, float lastShootTime, float cooldownPercent, Vector2 spawnPosition);
+    public abstract GameObject[] Activate(GameObject weapon, float lastShootTime, float cooldownPercent, Vector2 spawnPosition, Vector2 target);
 }

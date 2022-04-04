@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Scriptable Objects/Weapon/Gun")]
 public class GunWeaponSO : ProjectileWeaponSO
 {
-    public override GameObject[] Activate(GameObject weapon, float lastShootTime, float cooldownPercent, Vector2 spawnPosition) {
+    public override GameObject[] Activate(GameObject weapon, float lastShootTime, float cooldownPercent, Vector2 spawnPosition, Vector2 target) {
         if (Time.time >= lastShootTime + (1f / shootRate)) {
             GameObject projectile = Instantiate<GameObject>(projectilePrefab);
             projectile.transform.parent = weapon.transform.parent;

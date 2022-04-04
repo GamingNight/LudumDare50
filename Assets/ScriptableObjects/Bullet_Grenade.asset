@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fe48dbb40062a84a9ee593e2e5b3703, type: 3}
   m_Name: Bullet_Grenade
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 5

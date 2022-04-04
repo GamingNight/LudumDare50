@@ -44,7 +44,8 @@ public class ProjectileWeaponHandler : MonoBehaviour
         }
 
         if (Input.GetMouseButton(0) && weaponSelectorSO.selectedWeapon == gameObject && cooldownPercentSO.value >= weaponSO.cooldownLossPerShoot) {
-            GameObject[] projectiles = weaponSO.Activate(gameObject, lastShootTime, cooldownPercentSO.value, shootPoint.position);
+            Vector2 target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            GameObject[] projectiles = weaponSO.Activate(gameObject, lastShootTime, cooldownPercentSO.value, shootPoint.position, target);
             if (projectiles != null && projectiles.Length > 0) {
                 lastShootTime = Time.time;
                 cooldownPercentSO.value = Mathf.Max(0, cooldownPercentSO.value - weaponSO.cooldownLossPerShoot);
