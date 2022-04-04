@@ -43,12 +43,12 @@ public class ProjectileWeaponHandler : MonoBehaviour
             transform.rotation = Quaternion.Euler(0f, 0f, rotationZ);
         }
 
-        if (Input.GetMouseButton(0) && weaponSelectorSO.selectedWeapon == gameObject) {
-            GameObject projectile = weaponSO.Activate(gameObject, lastShootTime, cooldownPercentSO.value, shootPoint.position);
-            if (projectile != null) {
+        if (Input.GetMouseButton(0) && weaponSelectorSO.selectedWeapon == gameObject && cooldownPercentSO.value >= weaponSO.cooldownLossPerShoot) {
+            GameObject[] projectiles = weaponSO.Activate(gameObject, lastShootTime, cooldownPercentSO.value, shootPoint.position);
+            if (projectiles != null && projectiles.Length > 0) {
                 lastShootTime = Time.time;
                 cooldownPercentSO.value = Mathf.Max(0, cooldownPercentSO.value - weaponSO.cooldownLossPerShoot);
-                instantiatedProjectiles.Add(projectile);
+                instantiatedProjectiles.AddRange(projectiles);
             }
         } else {
             if (Time.time >= lastCooldownTime + (1f / weaponSO.cooldownReloadRate)) {
