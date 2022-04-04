@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 37763487}
   - component: {fileID: 37763488}
   - component: {fileID: 37763489}
+  - component: {fileID: 37763490}
   m_Layer: 0
   m_Name: Game
   m_TagString: Untagged
@@ -203,6 +204,23 @@ MonoBehaviour:
   - {fileID: 1383356822}
   - {fileID: 649954111}
   selectorSO: {fileID: 11400000, guid: a9d4426afa1a8cc4fab8c3f41e08a088, type: 2}
+--- !u!114 &37763490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37763486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8408c9a00791049a27821ba8ea9ace, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  difficulty: 0
+  generators:
+  - {fileID: 1429635040}
+  - {fileID: 849480827}
+  - {fileID: 1398617955}
 --- !u!1 &65031413
 GameObject:
   m_ObjectHideFlags: 0

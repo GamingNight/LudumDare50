@@ -25,7 +25,7 @@ public class GrandmaGenerator : MonoBehaviour
             Destroy(grandma);
         }
         instantiatedGrandmas.Clear();
-        lastSpawnTime = 0;
+        lastSpawnTime = Time.time - (spawnRate == 0 ? 0 : 1f / spawnRate);
     }
 
     void Update() {
@@ -41,5 +41,10 @@ public class GrandmaGenerator : MonoBehaviour
                 lastSpawnTime = Time.time;
             }
         }
+    }
+
+    public void ResetSpawnRateTo(float value) {
+        spawnRate = value;
+        lastSpawnTime = Time.time - (spawnRate == 0 ? 0 : 1f / spawnRate);
     }
 }
