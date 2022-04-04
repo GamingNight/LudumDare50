@@ -51,7 +51,10 @@ public class ProjectileWeaponHandler : MonoBehaviour
                 cooldownPercentSO.value = Mathf.Max(0, cooldownPercentSO.value - weaponSO.cooldownLossPerShoot);
                 instantiatedProjectiles.AddRange(projectiles);
                 foreach (GameObject projectile in projectiles) {
-                    projectile.GetComponent<SpriteRenderer>().sortingLayerID = GetComponent<SpriteRenderer>().sortingLayerID;
+                    SpriteRenderer[] spriteRenderers = projectile.GetComponentsInChildren<SpriteRenderer>();
+                    foreach (SpriteRenderer spriteRenderer in spriteRenderers) {
+                        spriteRenderer.sortingLayerID = GetComponent<SpriteRenderer>().sortingLayerID;
+                    }
                 }
             }
         } else {
