@@ -13,11 +13,9 @@ public class SetDifficulty : MonoBehaviour
     public GrandmaGenerator[] generators;
 
     private Difficulty previousDifficulty;
-    private bool first;
 
     private void Start() {
         SetDifficultyOnGenerators(0.25f);
-        first = true;
     }
 
     void Update() {
@@ -45,7 +43,6 @@ public class SetDifficulty : MonoBehaviour
             }
             SetDifficultyOnGenerators(spawnRate);
             previousDifficulty = difficulty;
-            first = false;
         }
     }
 
