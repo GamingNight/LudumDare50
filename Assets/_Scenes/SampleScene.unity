@@ -1689,7 +1689,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5929305938732501152, guid: 2da83fb27e0ea7f4a95c2b1a6913eed1, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5929305938732501155, guid: 2da83fb27e0ea7f4a95c2b1a6913eed1, type: 3}
       propertyPath: m_RootOrder
@@ -1823,6 +1823,10 @@ PrefabInstance:
     - target: {fileID: 7175246824364857330, guid: 140ab5d2fcedd04458585573fe1b918f, type: 3}
       propertyPath: m_Name
       value: GameOverMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 7175246824364857330, guid: 140ab5d2fcedd04458585573fe1b918f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 140ab5d2fcedd04458585573fe1b918f, type: 3}
