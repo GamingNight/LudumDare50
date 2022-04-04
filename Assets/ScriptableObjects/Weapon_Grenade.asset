@@ -9,8 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fe48dbb40062a84a9ee593e2e5b3703, type: 3}
-  m_Name: NerfBullet
+  m_Script: {fileID: 11500000, guid: 7213e5b53fbc61242b9d373798484f01, type: 3}
+  m_Name: Weapon_Grenade
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: b9080de9884beeb4a9e55f10d3f40971, type: 3}
-  speed: 10
+  projectilePrefab: {fileID: 7515326804073847037, guid: f86d5ef88ce16b34cbe1dbae2311ef27, type: 3}
+  shootRate: 1
+  cooldownLossPerShoot: 100
+  cooldownReloadRate: 10
