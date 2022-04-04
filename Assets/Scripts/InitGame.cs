@@ -8,6 +8,7 @@ public class InitGame : MonoBehaviour
     public ProjectileWeaponHandler[] weaponHandlers;
     public WeaponSelectorSO weaponSelectorSO;
     public ScoreSO scoreSO;
+    public int defaultWeaponIndex;
 
     public void Init() {
         foreach (GrandmaGenerator generator in grandmaGenerators) {
@@ -16,7 +17,7 @@ public class InitGame : MonoBehaviour
         foreach (ProjectileWeaponHandler weaponHandler in weaponHandlers) {
             weaponHandler.Init();
         }
-        weaponSelectorSO.selectedWeapon = null;
+        weaponSelectorSO.selectedWeapon = weaponHandlers[defaultWeaponIndex].gameObject;
         scoreSO.nbGrandmasRepelled = 0;
     }
 }

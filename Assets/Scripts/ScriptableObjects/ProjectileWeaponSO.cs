@@ -12,7 +12,7 @@ public class ProjectileWeaponSO : AbstractWeaponSO
     public float cooldownReloadRate; //percents per second
 
     public override GameObject Activate(GameObject weapon, float lastShootTime, float cooldownPercent, Vector2 spawnPosition) {
-        if (Time.time >= lastShootTime + (1f / shootRate) && cooldownPercent > 0) {
+        if (Time.time >= lastShootTime + (1f / shootRate) && cooldownPercent > cooldownLossPerShoot) {
             GameObject projectile = Instantiate<GameObject>(projectilePrefab);
             projectile.transform.parent = weapon.transform.parent;
             projectile.transform.position = spawnPosition;
