@@ -59,11 +59,11 @@ TagManager:
   - name: Kid2
     uniqueID: 4136522417
     locked: 0
-  - name: Kid3
-    uniqueID: 3967039053
-    locked: 0
   - name: GrandMa2
     uniqueID: 2503287619
+    locked: 0
+  - name: Kid3
+    uniqueID: 3967039053
     locked: 0
   - name: GrandMa3
     uniqueID: 1698909851

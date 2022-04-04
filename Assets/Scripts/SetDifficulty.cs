@@ -16,12 +16,13 @@ public class SetDifficulty : MonoBehaviour
     private bool first;
 
     private void Start() {
+        SetDifficultyOnGenerators(0.25f);
         first = true;
     }
 
     void Update() {
 
-        if (first || previousDifficulty != difficulty) {
+        if (previousDifficulty != difficulty) {
             float spawnRate = 0;
             switch (difficulty) {
                 case Difficulty.SUPER_EASY:
@@ -42,11 +43,15 @@ public class SetDifficulty : MonoBehaviour
                 default:
                     break;
             }
-            foreach (GrandmaGenerator generator in generators) {
-                generator.ResetSpawnRateTo(spawnRate);
-            }
+            SetDifficultyOnGenerators(spawnRate);
             previousDifficulty = difficulty;
             first = false;
+        }
+    }
+
+    private void SetDifficultyOnGenerators(float spawnRate) {
+        foreach (GrandmaGenerator generator in generators) {
+            generator.ResetSpawnRateTo(spawnRate);
         }
     }
 }

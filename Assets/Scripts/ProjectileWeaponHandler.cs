@@ -49,6 +49,9 @@ public class ProjectileWeaponHandler : MonoBehaviour
                 lastShootTime = Time.time;
                 cooldownPercentSO.value = Mathf.Max(0, cooldownPercentSO.value - weaponSO.cooldownLossPerShoot);
                 instantiatedProjectiles.AddRange(projectiles);
+                foreach (GameObject projectile in projectiles) {
+                    projectile.GetComponent<SpriteRenderer>().sortingLayerID = GetComponent<SpriteRenderer>().sortingLayerID;
+                }
             }
         } else {
             if (Time.time >= lastCooldownTime + (1f / weaponSO.cooldownReloadRate)) {
