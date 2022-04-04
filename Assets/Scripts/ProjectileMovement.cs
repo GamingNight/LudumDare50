@@ -10,7 +10,7 @@ public class ProjectileMovement : MonoBehaviour
 
     void Update() {
 
-        transform.Translate(direction * projectileSO.speed * Time.deltaTime);
+        transform.position = new Vector2(transform.position.x, transform.position.y) + (direction * projectileSO.speed * Time.deltaTime);
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
