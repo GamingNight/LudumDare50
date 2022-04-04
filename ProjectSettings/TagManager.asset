@@ -50,21 +50,21 @@ TagManager:
   - name: Kid1
     uniqueID: 3197613885
     locked: 0
+  - name: GrandMa1
+    uniqueID: 3790220749
+    locked: 0
+  - name: MiddleGround
+    uniqueID: 947854979
+    locked: 0
   - name: Kid2
     uniqueID: 4136522417
     locked: 0
   - name: Kid3
     uniqueID: 3967039053
     locked: 0
-  - name: GrandMa1
-    uniqueID: 3790220749
-    locked: 0
   - name: GrandMa2
     uniqueID: 2503287619
     locked: 0
   - name: GrandMa3
     uniqueID: 1698909851
-    locked: 0
-  - name: Foreground
-    uniqueID: 947854979
     locked: 0

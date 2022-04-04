@@ -8,6 +8,7 @@ public class GrandmaGenerator : MonoBehaviour
     public GameObject grandMaPrefab;
     public Vector3 spawnPosition;
     public float spawnRate; //nb per second
+    public float spawnOffset; // in seconds
     public ScoreSO scoreSo;
     public string sortingLayer;
 
@@ -25,7 +26,7 @@ public class GrandmaGenerator : MonoBehaviour
             Destroy(grandma);
         }
         instantiatedGrandmas.Clear();
-        lastSpawnTime = Time.time - (spawnRate == 0 ? 0 : 1f / spawnRate);
+        lastSpawnTime = Time.time - (spawnRate == 0 ? 0 : 1f / spawnRate) + spawnOffset;
     }
 
     void Update() {
@@ -45,6 +46,6 @@ public class GrandmaGenerator : MonoBehaviour
 
     public void ResetSpawnRateTo(float value) {
         spawnRate = value;
-        lastSpawnTime = Time.time - (spawnRate == 0 ? 0 : 1f / spawnRate);
+        lastSpawnTime = Time.time - (spawnRate == 0 ? 0 : 1f / spawnRate) + spawnOffset;
     }
 }

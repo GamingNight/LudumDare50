@@ -9,6 +9,7 @@ public class InitGame : MonoBehaviour
     public WeaponSelectorSO weaponSelectorSO;
     public ScoreSO scoreSO;
     public int defaultWeaponIndex;
+    public SetDifficulty setDifficultyScript;
 
     public void Init() {
         foreach (GrandmaGenerator generator in grandmaGenerators) {
@@ -19,5 +20,6 @@ public class InitGame : MonoBehaviour
         }
         weaponSelectorSO.selectedWeapon = weaponHandlers[defaultWeaponIndex].gameObject;
         scoreSO.nbGrandmasRepelled = 0;
+        setDifficultyScript.difficulty = SetDifficulty.Difficulty.SUPER_EASY;
     }
 }
