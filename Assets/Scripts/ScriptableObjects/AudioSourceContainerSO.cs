@@ -28,4 +28,10 @@ public class AudioSourceContainerSO : ScriptableObject
             }
         }
     }
+
+    public void Clear() {
+        if (sources != null) {
+            sources.Clear();
+        }
+    }
 }

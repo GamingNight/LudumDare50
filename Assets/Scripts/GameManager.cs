@@ -30,11 +30,7 @@ public class GameManager : MonoBehaviour
     }
 
     public void GameOver() {
-        AudioSource[] gameAudioSources = gameAudioContainer.GetComponentsInChildren<AudioSource>();
-        foreach (AudioSource source in gameAudioSources) {
-            source.Stop();
-        }
-        inGameAudioContainerSO.RemoveAllSources();
+        inGameAudioContainerSO.Clear();
         game.SetActive(false);
         gameoverMenu.SetActive(true);
     }
