@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
     }
 
     public GameObject game;
+    public GameObject gameAudioContainer;
+    public AudioSourceContainerSO inGameAudioContainerSO;
     public GameObject gameoverMenu;
     public GameObject startMenu;
 
@@ -28,6 +30,11 @@ public class GameManager : MonoBehaviour
     }
 
     public void GameOver() {
+        AudioSource[] gameAudioSources = gameAudioContainer.GetComponentsInChildren<AudioSource>();
+        foreach (AudioSource source in gameAudioSources) {
+            source.Stop();
+        }
+        inGameAudioContainerSO.RemoveAllSources();
         game.SetActive(false);
         gameoverMenu.SetActive(true);
     }
