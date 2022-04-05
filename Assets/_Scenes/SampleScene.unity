@@ -908,6 +908,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 37763487}
     m_Modifications:
+    - target: {fileID: 572357348, guid: 273a26bcdbe44274b89b11f2336aa344, type: 3}
+      propertyPath: m_Volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 572357348, guid: 273a26bcdbe44274b89b11f2336aa344, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d3e404ab4e1f1d84887ea87857f64388, type: 3}
     - target: {fileID: 3302788993927827904, guid: 273a26bcdbe44274b89b11f2336aa344, type: 3}
       propertyPath: m_Name
       value: Kid1
@@ -1965,6 +1973,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 37763487}
     m_Modifications:
+    - target: {fileID: 1237361094, guid: fb45abaa33c50ed49aec1962e2ab828a, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 9cb8a243622723c4f81aee42c9ab5ad1, type: 3}
     - target: {fileID: 7965618215930993142, guid: fb45abaa33c50ed49aec1962e2ab828a, type: 3}
       propertyPath: m_RootOrder
       value: 4

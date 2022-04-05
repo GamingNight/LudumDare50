@@ -7,6 +7,7 @@ public class ProjectileCurvedMovement : MonoBehaviour
     public ProjectileSO projectileSO;
     public Vector2 target;
     public GameObject zoneDamageObject;
+    public AudioSource boomSource;
 
     private Vector2 initPoint;
     private float speed;
@@ -14,6 +15,8 @@ public class ProjectileCurvedMovement : MonoBehaviour
     private float totalDuration;
     private float durationSoFar;
     private bool stopMovement;
+    private float boomInitPitch;
+    private float boomInitVolume;
     void Start() {
         initPoint = transform.position;
         speed = projectileSO.speed;
@@ -22,6 +25,8 @@ public class ProjectileCurvedMovement : MonoBehaviour
         totalDuration = distance / speed;
         durationSoFar = 0;
         stopMovement = false;
+        boomInitPitch = boomSource.pitch;
+        boomInitVolume = boomSource.volume;
     }
 
     void Update() {
@@ -51,6 +56,9 @@ public class ProjectileCurvedMovement : MonoBehaviour
 
     private void TriggerExplosion() {
         zoneDamageObject.SetActive(true);
+        boomSource.pitch = boomInitPitch + Random.Range(-0.3f, 0.3f);
+        boomSource.volume = boomInitVolume + Random.Range(-0.1f, 0.1f);
+        boomSource.Play();
         GetComponent<SpriteRenderer>().enabled = false;
         stopMovement = true;
     }
