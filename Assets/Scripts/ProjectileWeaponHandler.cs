@@ -11,12 +11,17 @@ public class ProjectileWeaponHandler : MonoBehaviour
     public float minOrientation;
     public float maxOrientation;
     public Transform shootPoint;
+    public AudioSource shootSource;
 
     private float lastShootTime;
     private float lastCooldownTime;
     private List<GameObject> instantiatedProjectiles;
+    private float shootSourceInitPitch;
+    private float shootSourceInitVolume;
 
     void Start() {
+        shootSourceInitPitch = shootSource.pitch;
+        shootSourceInitVolume = shootSource.volume;
         Init();
     }
 
@@ -56,6 +61,9 @@ public class ProjectileWeaponHandler : MonoBehaviour
                         spriteRenderer.sortingLayerID = GetComponent<SpriteRenderer>().sortingLayerID;
                     }
                 }
+                shootSource.pitch = shootSourceInitPitch + Random.Range(-0.3f, 0.3f);
+                shootSource.volume = shootSourceInitVolume + Random.Range(-0.1f, 0.1f);
+                shootSource.Play();
             }
         } else {
             if (Time.time >= lastCooldownTime + (1f / weaponSO.cooldownReloadRate)) {

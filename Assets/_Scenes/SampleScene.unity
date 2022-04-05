@@ -908,10 +908,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 37763487}
     m_Modifications:
-    - target: {fileID: 3302788993244605655, guid: 273a26bcdbe44274b89b11f2336aa344, type: 3}
-      propertyPath: weaponSO
-      value: 
-      objectReference: {fileID: 11400000, guid: ff29e84a5a8acd842ab002e42942fe18, type: 2}
     - target: {fileID: 3302788993927827904, guid: 273a26bcdbe44274b89b11f2336aa344, type: 3}
       propertyPath: m_Name
       value: Kid1
