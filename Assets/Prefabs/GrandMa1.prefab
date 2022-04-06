@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 5508380081107285398}
   - component: {fileID: 7152316499979433442}
   - component: {fileID: 5933487008440284384}
+  - component: {fileID: 6061491749949024134}
   m_Layer: 0
   m_Name: GrandMa1
   m_TagString: Grandma
@@ -220,6 +221,26 @@ MonoBehaviour:
   animator: {fileID: 4926695168903036314}
   kissAudioSource: {fileID: 7081450468040268850}
   audioContainerSO: {fileID: 11400000, guid: dbaaf4d8ec7c4604287a83264b1737dc, type: 2}
+--- !u!95 &6061491749949024134
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1725267820591588786}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a45d9bb5d9bfff040a96ced5864d4eea, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1725267820760557498
 GameObject:
   m_ObjectHideFlags: 0
@@ -1080,8 +1101,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8004104321334787881}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.92, y: 3.8, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.9200001, y: 3.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
