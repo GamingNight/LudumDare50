@@ -9,6 +9,7 @@ public class KillGrandmaByProjectile : MonoBehaviour
     public AudioSourceContainerSO audioContainerSO;
     public AudioSource source;
     public AudioClip[] deathClips;
+    public Animator animator;
 
     private bool destroying;
     private float initPitch;
@@ -29,11 +30,12 @@ public class KillGrandmaByProjectile : MonoBehaviour
             source.Play();
             source.pitch = initPitch + Random.Range(-0.3f, 0.3f);
             source.volume = initVolume + Random.Range(-0.1f, 0.1f);
-            foreach(SpriteRenderer sr in GetComponentsInChildren<SpriteRenderer>()) {
-                sr.enabled = false;
-            }
+            //foreach(SpriteRenderer sr in GetComponentsInChildren<SpriteRenderer>()) {
+            //    sr.enabled = false;
+            //}
             GetComponent<BoxCollider2D>().enabled = false;
             destroying = true;
+            animator.SetTrigger("Death");
         }
     }
 
@@ -41,7 +43,7 @@ public class KillGrandmaByProjectile : MonoBehaviour
         if (destroying && !source.isPlaying) {
             audioContainerSO.RemoveSource(source);
             destroying = false;
-            Destroy(gameObject);
+            Destroy(gameObject, 2);
         }
     }
 }
