@@ -353,6 +353,14 @@ MonoBehaviour:
   - {fileID: 1429635040}
   - {fileID: 849480827}
   - {fileID: 1398617955}
+  musicLayersEasy:
+  - {fileID: 27736738}
+  musicLayersMedium:
+  - {fileID: 1611600851}
+  musicLayersHard:
+  - {fileID: 693847132}
+  - {fileID: 769079720}
+  musicLayersSuperHard: []
 --- !u!114 &37763491
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -37,7 +37,6 @@ public class ProjectileWeaponHandler : MonoBehaviour
         cooldownPercentSO.value = 100;
         lastCooldownTime = 0;
     }
-
     void Update() {
 
         if (weaponSelectorSO.selectedWeapon == gameObject) {
@@ -66,8 +65,8 @@ public class ProjectileWeaponHandler : MonoBehaviour
                 shootSource.Play();
             }
         } else {
-            if (Time.time >= lastCooldownTime + (1f / weaponSO.cooldownReloadRate)) {
-                cooldownPercentSO.value = Mathf.Min(100, cooldownPercentSO.value + (1f / weaponSO.cooldownReloadRate));
+            if (cooldownPercentSO.value < 100) {
+                cooldownPercentSO.value = Mathf.Min(100, cooldownPercentSO.value + (100 * Time.deltaTime / weaponSO.cooldownReloadDuration));
             }
         }
 
